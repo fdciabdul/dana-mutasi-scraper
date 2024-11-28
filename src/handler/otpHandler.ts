@@ -1,6 +1,11 @@
 import { Page } from "puppeteer";
 import selectors from "../selectors";
-
+/**
+ * @author taqin
+ * Handle OTP bila diperlukan
+ * @param page Page
+ * @param otp string 
+**/
 export async function handleOtp(page: Page, otp: string): Promise<void> {
   try {
     await page.waitForSelector(selectors.otpPrompt, { timeout: 10000 });

@@ -4,7 +4,12 @@ import { handleOtp } from "../handler/otpHandler";
 import selectors from "../selectors";
 import { promptInput } from "../utils";
 import { BASE_DANA_URL } from "../utils/urlList";
-
+/**
+ * @author taqin
+ * @description Base script untuk mutasi dana
+ * @param page Page
+ * @return { void } return mutasi dana dalam bentuk json
+**/
 export async function mutasiDana(page: Page): Promise<void> {
   const encodeUrl = encodeURI("/i/biller-app/game/home");
   await page.goto(

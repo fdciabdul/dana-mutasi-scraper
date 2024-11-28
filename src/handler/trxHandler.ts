@@ -3,7 +3,12 @@ import fs from "fs";
 import selectors from "../selectors";
 import { TransactionDetails } from "../interfaces";
 import { BASE_DANA_URL } from "../utils/urlList";
-
+/**
+ * @author taqin
+ * Mengumpulkan detail transaksi dari api dana ygy
+ * @param page Page
+ * @return { TransactionDetails[] }
+**/
 export async function collectTransactionDetails(page: Page): Promise<TransactionDetails[]> {
   const allTransactionDetails: TransactionDetails[] = [];
   try {
